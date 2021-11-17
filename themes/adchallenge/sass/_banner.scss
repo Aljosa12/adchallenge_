@@ -1,0 +1,89 @@
+@import "_variables.scss";
+
+#block-top-content-header {
+  // margin-top: 0;
+  height: 724px;
+  background-size: cover; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+  #challenge-home {
+    width: 400px;
+    margin: auto;
+    padding-top: 240px;
+    text-align: center;
+    h2 {
+      color: $white;
+      margin-top: 0;
+      font-weight: 300;
+      font-size: 24px;
+      border-bottom: 1px solid;
+      padding-right: blackpx;
+      padding-bottom: 32px;
+      width: max-content;
+      margin: auto;
+    }
+    h1 {
+      margin-top: 24px;
+      font-size: 64px;
+      text-decoration: none;
+      color: $white;
+      font-weight: 200;
+    }
+
+    a {
+      padding: 17px 51px;
+      margin-top: 52px;
+      color: $white;
+      background-color: $red;
+      border: solid 1px $red;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    a:hover {
+      background-color: $black;
+      border: solid 1px $white;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #block-top-content-header {
+    // margin-top: 0;
+    height: 624px;
+    background-size: cover; /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    #challenge-home {
+      width: 310px;
+      margin: auto;
+      padding-top: 200px;
+      text-align: center;
+      h2 {
+        color: $white;
+        margin-top: 0;
+        font-weight: 300;
+        font-size: 24px;
+        border-bottom: 1px solid;
+        padding-bottom: 25px;
+        width: max-content;
+        margin: auto;
+      }
+      h1 {
+        font-size: 44px;
+        text-decoration: none;
+        color: $white;
+      }
+
+      a {
+        padding: 17px 51px;
+        margin-top: 52px;
+        color: $white;
+        background-color: $red;
+        border: none;
+        border-radius: 2px;
+        text-decoration: none;
+      }
+    }
+  }
+}

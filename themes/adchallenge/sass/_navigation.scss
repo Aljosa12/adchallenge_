@@ -1,0 +1,96 @@
+@import "_variables.scss";
+
+.region-header {
+  position: fixed;
+  // top: 200px;
+  width: 100%;
+  height: 96px;
+  display: grid;
+  grid-template-areas: "brand menuNav";
+  grid-template-columns: 525px 525px;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 100;
+  #block-adchallenge-main-menu-menu {
+    grid-area: menuNav;
+    text-align: right;
+    margin: auto;
+  }
+  .menu {
+    text-align: right;
+    .menu-item {
+      padding-top: 21px;
+      display: inline-block;
+      a {
+        color: $white;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        margin-left: 30px;
+        cursor: pointer;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  #block-adchallenge-branding {
+    grid-area: brand;
+    display: grid;
+    grid-template-areas: "logo brandName";
+    grid-template-columns: 81px 1fr;
+    .site-slogan {
+      grid-area: brandName;
+      margin-top: 26px;
+      font-size: 24px;
+      font-weight: 900;
+      color: white;
+      width: 200px;
+
+      a {
+        color: $white;
+
+        text-decoration: none;
+      }
+    }
+    .site-logo {
+      grid-area: logo;
+      img {
+        padding-top: 15px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .region-header {
+    grid-template-columns: max-content 1fr;
+    .menu {
+      padding-right: 15px;
+    }
+
+    #block-adchallenge-branding {
+      padding-left: 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .region-header {
+    grid-template-columns: 1fr;
+    .menu {
+      padding-right: 0px;
+      text-align: center;
+      .menu-item:nth-child(1) {
+        a {
+          margin-left: 0px;
+        }
+      }
+    }
+
+    #block-adchallenge-branding {
+      display: none;
+    }
+  }
+}

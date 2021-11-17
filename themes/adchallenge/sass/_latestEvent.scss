@@ -1,0 +1,66 @@
+@import "_variables.scss";
+
+#block-latest-event {
+  background-color: $darkBlue;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  #challenge-event {
+    display: grid;
+    grid-template-areas: "image a textContent";
+    grid-template-columns: max-content 1fr 570px;
+    max-width: 1050px;
+    margin: auto;
+    .content-right {
+      grid-area: textContent;
+      h2 {
+        font-weight: 300;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 36px;
+        line-height: 42px;
+        margin-top: 38px;
+        margin-bottom: 0;
+      }
+      p {
+        color: $lightGray;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 30px;
+        margin-top: 41px;
+      }
+      hr {
+        margin-top: 24px;
+        margin-bottom: 0px;
+        width: 95px;
+        border: 2px solid $blue;
+        margin-left: 0;
+        background-color: $blue;
+      }
+    }
+    .img-left {
+      grid-area: image;
+    }
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  #block-latest-event {
+    margin-top: -1px;
+    padding-top: 83px;
+    padding-bottom: 83px;
+    #challenge-event {
+      grid-template-areas: "image" "textContent";
+      grid-template-columns: 310px;
+      max-width: 310px;
+      margin: auto;
+
+      .img-left {
+        grid-area: image;
+        img {
+          max-width: 310px;
+          height: auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import "_variables.scss";
+
+.region-footer {
+  height: 120px;
+  .menu {
+    height: 70px;
+    margin: 0;
+    text-align: center;
+    background-color: $terms;
+    .menu-item {
+      padding-top: 23px;
+      display: inline-block;
+      margin-left: 29px;
+      a {
+        font-size: 14px;
+        color: $mediumGray;
+        text-decoration: none;
+      }
+    }
+    .menu-item:nth-child(1) {
+      margin-left: 0;
+    }
+  }
+
+  #block-footercreated {
+    height: 50px;
+    margin: 0;
+    background-color: $created;
+    text-align: center;
+    p {
+      font-size: 14px;
+      padding-top: 15px;
+      margin: 0;
+      color: $lightGray;
+      a {
+        color: $lightGray;
+      }
+    }
+  }
+}

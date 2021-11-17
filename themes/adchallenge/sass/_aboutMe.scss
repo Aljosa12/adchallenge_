@@ -1,0 +1,117 @@
+@import "_variables.scss";
+
+#block-about-me {
+  background-color: $black;
+  padding-top: 245px;
+  padding-bottom: 200px;
+  position: relative;
+  #challenge-about-me {
+    display: grid;
+    // margin-top: 0;
+    grid-template-areas: "textContent a image";
+    grid-template-columns: 420px 1fr max-content;
+
+    max-width: 1050px;
+    margin: auto;
+    .content-left {
+      grid-area: textContent;
+      position: relative;
+      z-index: 5;
+      h2 {
+        font-weight: 300;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 36px;
+        line-height: 42px;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      p {
+        color: $lightGray;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 30px;
+        margin-top: 41px;
+      }
+      hr {
+        margin-top: 24px;
+        margin-bottom: 0px;
+        width: 95px;
+        border: 2px solid $blue;
+        margin-left: 0;
+        background-color: $blue;
+      }
+    }
+    .img-right {
+      grid-area: image;
+      position: relative;
+      img {
+        position: relative;
+        z-index: 5;
+      }
+      #box-small {
+        z-index: 3;
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background-color: $smallBox;
+        transform: rotate(45deg);
+        bottom: -71px;
+        right: -75px;
+        overflow: hidden;
+      }
+    }
+  }
+
+  #box-big {
+    top: 119px;
+    z-index: 3;
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    background-color: $bigBox;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  #block-about-me {
+    #challenge-about-me {
+      .img-right {
+        #box-small {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  #block-about-me {
+    margin-top: -1px;
+    background-color: $black;
+    padding-top: 63px;
+    padding-bottom: 103px;
+    #challenge-about-me {
+      display: grid;
+      // margin-top: 0;
+      grid-template-areas: "textContent" "image";
+      grid-template-columns: 310px;
+      row-gap: 20px;
+      max-width: 310px;
+      margin: auto;
+
+      .img-right {
+        img {
+          max-width: 310px;
+          height: auto;
+        }
+      }
+    }
+    #box-big {
+      display: none;
+    }
+  }
+}
