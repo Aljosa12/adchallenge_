@@ -33,6 +33,11 @@
         text-transform: uppercase;
       }
     }
+    .menu-item:first-child {
+      a {
+        border-bottom: solid 2px #0097a7;
+      }
+    }
   }
 
   #block-adchallenge-branding {

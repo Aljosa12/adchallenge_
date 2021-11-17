@@ -31,6 +31,9 @@
   text-decoration: none;
   text-transform: uppercase;
 }
+.region-header .menu .menu-item:first-child a {
+  border-bottom: solid 2px #0097a7;
+}
 .region-header #block-adchallenge-branding {
   grid-area: brand;
   display: grid;
